@@ -1,13 +1,25 @@
 import React from 'react'
-import { Avatar } from 'antd'
+import { Avatar, Col, Row } from 'antd'
 import { Container } from '../../atoms/container'
+import classes from './style.module.less'
 
 export const Header = () => {
   return (
-    <Container>
-      <Avatar>
-        @amabunny
-      </Avatar>
-    </Container>
+    <div className={classes.wrapper}>
+      <Container>
+        <Row
+          align='middle'
+          type='flex'
+        >
+          <Col>
+            <Avatar />
+          </Col>
+
+          <Col>
+            @mabunny
+          </Col>
+        </Row>
+      </Container>
+    </div>
   )
 }
