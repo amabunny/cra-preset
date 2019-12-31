@@ -1,9 +1,14 @@
 import React from 'react'
 import { RouteComponentProps } from '@reach/router'
+import { BaseTemplate, Container } from 'ui'
 import { Skills } from '../components/root'
 
 export const SkillsPage = (props: RouteComponentProps) => {
   return (
-    <Skills />
+    <BaseTemplate>
+      <Container>
+        <Skills />
+      </Container>
+    </BaseTemplate>
   )
 }

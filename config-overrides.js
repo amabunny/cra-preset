@@ -1,5 +1,18 @@
-const { override, addBabelPlugin } = require('customize-cra')
+const {
+  override,
+  addBabelPlugin,
+  addLessLoader,
+  fixBabelImports
+} = require('customize-cra')
 
 module.exports = override(
-  addBabelPlugin('react-hot-loader/babel')
+  addLessLoader({
+    javascriptEnabled: true
+  }),
+  addBabelPlugin('react-hot-loader/babel'),
+  fixBabelImports('import', {
+    libraryName: 'antd',
+    libraryDirectory: 'es',
+    style: true
+  })
 )
