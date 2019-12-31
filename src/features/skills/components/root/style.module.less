@@ -1,0 +1,27 @@
+@import "~styles/theme";
+
+@half-indent: @indent * 0.75;
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: @indent;
+  align-items: start;
+}
+
+.card {
+  box-shadow: @box-shadow-base;
+  border-radius: 10px;
+}
+
+.imageCover {
+  padding: @indent;
+  display: grid;
+  justify-content: center;
+}
+
+.image {
+  height: 70px;
+  margin: @indent 0 @half-indent;
+  width: auto;
+}

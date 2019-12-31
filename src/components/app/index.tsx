@@ -1,11 +1,13 @@
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
+import { IntlProvider } from 'features/intl'
 import { Router } from '../router'
-import './style.css'
 
 const AppView = () => {
   return (
-    <Router />
+    <IntlProvider>
+      <Router />
+    </IntlProvider>
   )
 }
 

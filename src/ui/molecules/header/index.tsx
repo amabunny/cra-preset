@@ -1,5 +1,6 @@
 import React from 'react'
 import { Avatar, Col, Row } from 'antd'
+import { SergeiModel } from 'models/sergei'
 import { Container } from '../../atoms/container'
 import classes from './style.module.less'
 
@@ -9,14 +10,15 @@ export const Header = () => {
       <Container>
         <Row
           align='middle'
+          gutter={8}
           type='flex'
         >
           <Col>
-            <Avatar />
+            <Avatar src={SergeiModel.avatarUrl} />
           </Col>
 
           <Col>
-            @mabunny
+            {SergeiModel.nickname}
           </Col>
         </Row>
       </Container>

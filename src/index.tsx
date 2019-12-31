@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { App, serviceWorker } from 'core'
+import { App } from 'components/app'
+import * as serviceWorker from 'utils/service-worker'
 
 ReactDOM.render(<App />, document.getElementById('root'))
 

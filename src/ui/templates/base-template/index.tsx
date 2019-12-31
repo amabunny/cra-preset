@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Header } from '../../molecules/header'
 import { Footer } from '../../molecules/footer'
 import classes from './style.module.less'
@@ -25,9 +25,9 @@ export const BaseTemplate = ({ children }: IProps) => {
           </div>
         )
         : (
-          <Fragment>
+          <>
             No children passed
-          </Fragment>
+          </>
         )
       }
 
