@@ -2,16 +2,22 @@
 
 @half-indent: @indent * 0.75;
 
+.container {
+  height: 100%;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: @indent;
-  align-items: start;
+  align-content: center;
+  height: 100%;
 }
 
 .card {
   box-shadow: @box-shadow-base;
   border-radius: 10px;
+  text-align: center;
 }
 
 .imageCover {
@@ -24,4 +30,8 @@
   height: 70px;
   margin: @indent 0 @half-indent;
   width: auto;
+}
+
+.textCenter {
+  text-align: center;
 }

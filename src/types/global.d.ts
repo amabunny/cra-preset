@@ -18,9 +18,9 @@ declare type Skills =
   | 'react'
   | 'vue'
   | 'dp'
+  | 'markup'
 
 declare interface ISkill {
   key: Skills
-  title: string
   image: string
 }

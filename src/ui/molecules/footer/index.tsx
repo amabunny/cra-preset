@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react'
-import { FormattedMessage } from 'react-intl'
-import moment from 'moment'
+import { FormattedMessage, FormattedDate } from 'react-intl'
 import { Container } from '../../atoms/container'
 import classes from './style.module.less'
 
-const REFRESH_TIMER_DURATION = 1000
+const TIMER_REFRESH_DURATION = 1000
 
 export const Footer = () => {
   const [time, setTime] = useState(new Date())
@@ -18,7 +17,7 @@ export const Footer = () => {
   useEffect(
     () => {
       const timerFn = () => {
-        timer.current = setTimeout(timerFn, REFRESH_TIMER_DURATION)
+        timer.current = setTimeout(timerFn, TIMER_REFRESH_DURATION)
         setTime(new Date())
       }
 
@@ -41,7 +40,14 @@ export const Footer = () => {
         </div>
 
         <div>
-          {moment(time).format('hh:mm:ss')}
+          <FormattedDate
+            day='numeric'
+            hour='numeric'
+            minute='numeric'
+            month='numeric'
+            second='numeric'
+            value={time}
+          />
         </div>
       </Container>
     </div>

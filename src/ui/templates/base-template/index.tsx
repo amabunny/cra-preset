@@ -20,7 +20,7 @@ export const BaseTemplate = ({ children }: IProps) => {
 
       {children
         ? (
-          <div>
+          <div className={classes.children}>
             {children}
           </div>
         )
