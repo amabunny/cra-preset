@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { IntlProvider as ReactIntlProvider } from 'react-intl'
 import { useStore } from 'effector-react'
-import { $language, $intl, getLocaleAndChangeLanguage } from '../../model'
+import { $language, $intl } from '../../model'
 
 interface IProps {
   children: React.ReactNode
@@ -10,13 +10,6 @@ interface IProps {
 export const IntlProvider = ({ children }: IProps) => {
   const language = useStore($language)
   const { data, loading } = useStore($intl)
-
-  useEffect(
-    () => {
-      getLocaleAndChangeLanguage()
-    },
-    []
-  )
 
   if (loading || !language) {
     return (

@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { hot } from 'react-hot-loader/root'
-import { IntlProvider } from 'features/intl'
+import { IntlProvider, getLocaleAndChangeLanguage } from 'shared-features/intl'
 import { Router } from '../router'
 
 const AppView = () => {
+  useEffect(() => {
+    getLocaleAndChangeLanguage()
+  }, [])
+
   return (
     <IntlProvider>
       <Router />
